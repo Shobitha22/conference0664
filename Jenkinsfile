@@ -14,13 +14,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'javac Hello.java'
+                bat 'start conference.html'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java Hello'
+                bat 'python -m http.server 8000'
             }
         }
 
